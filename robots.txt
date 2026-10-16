@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.birminghambiohazardcleaning.co.uk/sitemap.xml
