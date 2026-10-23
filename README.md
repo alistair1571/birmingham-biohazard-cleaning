@@ -11,6 +11,17 @@ Static rank-and-rent lead-gen site targeting biohazard cleaning in Birmingham an
 - `style.css` and `script.js` are shared by every page
 - `wrangler.jsonc`, `.assetsignore` and `CNAME` are deployment config
 
+## Preview locally
+
+The site uses root-relative links (`/style.css`), so it has to be served over HTTP rather than opened from disk.
+
+- Mac: double-click `preview.command` (if blocked, right-click, Open)
+- Windows: double-click `preview.bat`
+- Any system with Python 3: `python3 preview.py`
+- With Node: `npx serve .`
+
+Then visit http://localhost:8000. The preview files are excluded from deployment through `.assetsignore`.
+
 ## Before going live
 
 Search the whole project for these placeholders and replace them:

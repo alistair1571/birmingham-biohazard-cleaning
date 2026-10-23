@@ -109,12 +109,7 @@ ul { margin: 0 0 1em; padding-left: 1.2em; }
   color: var(--ink); text-decoration: none;
 }
 .brand:hover { color: var(--ink); }
-.brand-mark {
-  display: grid; place-items: center; width: 36px; height: 36px;
-  background: var(--violet); color: var(--lime); border-radius: 12px;
-}
-.brand-mark svg { width: 20px; height: 20px; }
-.brand em { font-style: normal; color: var(--violet); }
+.brand-logo { display: block; height: 52px; width: auto; }
 
 .site-nav { display: flex; align-items: center; gap: 4px; }
 .site-nav > a:not(.btn), .has-menu > a {
@@ -386,9 +381,8 @@ a.card:hover .more svg { transform: translateX(4px); }
 .site-footer li { margin-bottom: 8px; }
 .site-footer a { color: #cfc9e3; text-decoration: none; }
 .site-footer a:hover { color: var(--lime); }
-.site-footer .brand { color: var(--white); margin-bottom: 14px; }
-.site-footer .brand em { color: var(--lime); }
-.site-footer .brand-mark { background: var(--lime); color: var(--ink); }
+.site-footer .brand { margin-bottom: 14px; }
+.site-footer .brand-logo { height: 56px; }
 .footer-about { font-size: 0.95rem; max-width: 340px; }
 .footer-contact a { color: var(--white); font-weight: 700; }
 .footer-legal {
@@ -447,3 +441,24 @@ a.card:hover .more svg { transform: translateX(4px); }
   .ticker-track { animation: none; }
   .btn, .card { transition: none; }
 }
+
+/* ---------- Long-form homepage sections ---------- */
+.container.narrow { max-width: calc(780px + 2 * var(--gutter)); }
+.container.narrow > h2 { margin-bottom: 20px; }
+.container.narrow .prose h3 { font-size: 1.15rem; margin-top: 1.5em; margin-bottom: 0.4em; }
+.table-wrap { margin: 24px 0; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+.price-table { width: 100%; border-collapse: collapse; font-size: 0.98rem; }
+.price-table th, .price-table td { padding: 14px 20px; text-align: left; vertical-align: top; }
+.price-table thead th { background: var(--lilac-50); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.price-table tbody tr + tr td { border-top: 1px solid var(--line); }
+.price-table td:last-child { font-weight: 700; color: var(--violet); white-space: nowrap; }
+@media (max-width: 640px) {
+  .price-table th, .price-table td { padding: 12px 14px; }
+  .price-table td:last-child { white-space: normal; }
+}
+
+.hero-note { margin: 18px 0 0; max-width: 56ch; color: var(--ink-soft, inherit); font-size: 1rem; }
+.prose .btn { margin: 4px 8px 4px 0; }
+
+.price-table.plain td:last-child { font-weight: 400; color: inherit; white-space: normal; }
+.price-table.plain td:first-child { width: 36%; }
